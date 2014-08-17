@@ -79,4 +79,4 @@ dataset2 <- ddply(d_dataset,.(activity,subject),numcolwise(mean))
 colnames(dataset2)[-c(1:2)] <- paste(colnames(dataset2)[-c(1:2)], "_avg", sep="") 
 
 # Save tidy dataset2  
-write.csv(dataset2,"tidy.csv", sep="\t") 
+write.table(dataset2,"tidy.txt", sep="\t", row.name=FALSE) 
